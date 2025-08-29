@@ -28,7 +28,7 @@
   <span class="heartCount flex items-center gap-1 px-4 py-0 rounded-full bg-green-50 text-black text-md font-bold">
     0 <span class="text-red-600"><img src="images/love.png" alt="love"></span>
   </span>
-  <span class="flex items-center gap-1 px-4 py-0 rounded-full bg-yellow-50 text-black text-md font-bold">
+  <span class="coinBalance flex items-center gap-1 px-4 py-0 rounded-full bg-yellow-50 text-black text-md font-bold">
     100 <span class="text-yellow-500"><img src="images/coin.png" alt="coin"></span>
   </span>
   <span class="copyCount flex items-center gap-1 px-4 py-0 rounded-full bg-green-500 text-white text-md font-bold">
@@ -134,10 +134,25 @@
         </button>
       </div>
     </div>
-    <!-- Card 4: row-span-3 on large screens, move to last on small screens -->
-    <div class="card w-full h-full bg-white rounded-2xl shadow-md p-5 flex flex-col justify-between lg:row-span-3 lg:order-none order-last">
-     Card 4 content (row-span-3 on lg, last on small)
+<!--===========================================================================-->
+<div class="card w-full h-full bg-white rounded-2xl shadow-md p-5 flex flex-col justify-between lg:row-span-3 lg:order-none order-last">
+   <div class="histortContent">
+   <div class="flex justify-between mt-2 items-center">
+      <div class="clearHd">
+         <h3 class="font-bold"><i class="fa-solid fa-clock"></i> Call History</h3>
+      </div>
+      <div class="clearBtn">
+     <button id="clearHistory" class="bg-green-500 cursor-pointer text-white rounded-full px-5 py-2 text-sm  font-medium hover:bg-green-600">Clear</button>
      </div>
+    </div>
+    <div>
+      <ul id="historyList" class="mt-3 text-sm text-gray-700 space-y-1"></ul>
+    </div>
+   </div>
+     
+      
+  </div>
+  <!--===============================================================================-->
   <div class="card bg-white rounded-2xl shadow-md p-5 flex flex-col justify-between">
       <div class="flex justify-between items-start">
       <div class="h-[50px] w-[50px] flex items-center justify-center rounded-xl bg-[#FFE3E2]">
