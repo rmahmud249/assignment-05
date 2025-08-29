@@ -13,15 +13,14 @@ button.addEventListener('click', function(){
   });
 });
 
+const headerCounter = document.querySelector(".copyCount"); 
 document.querySelectorAll(".copyBtn").forEach((btn) => {
     btn.addEventListener("click", function() {
-        let textToCopy = document.querySelector(".copyText").innerText;
+        let card = btn.closest(".card");
+        let textToCopy = card.querySelector(".copyText").innerText;
         navigator.clipboard.writeText(textToCopy);
-        let counterSpan = document.querySelector(".copyCount");
-        let currentText = counterSpan.innerText;
-        let currentNum = parseInt(currentText) || 0;
-        counterSpan.innerText =currentNum+1;
+        let currentNum = parseInt(headerCounter.innerText) || 0;
+        headerCounter.innerText = (currentNum + 1) + " Copy";
     });
 });
-
 
