@@ -21,6 +21,10 @@ document.querySelectorAll(".copyBtn").forEach((btn) => {
         navigator.clipboard.writeText(textToCopy);
         let currentNum = parseInt(headerCounter.innerText) || 0;
         headerCounter.innerText = (currentNum + 1) + " Copy";
+        
+        alert(textToCopy + " is copied");
     });
 });
+
+
 
